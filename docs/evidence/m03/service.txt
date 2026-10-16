@@ -1,0 +1,21 @@
+● cc-m03.service - PTI 2802 M03 Flask Application
+     Loaded: loaded (/etc/systemd/system/cc-m03.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2026-10-14 06:54:23 UTC; 1 day 23h ago
+   Main PID: 737 (gunicorn)
+      Tasks: 4 (limit: 532)
+     Memory: 28.8M (peak: 37.1M swap: 14.7M swap peak: 14.8M)
+        CPU: 20.205s
+     CGroup: /system.slice/cc-m03.service
+             ├─737 /srv/cc-m03/.venv/bin/python /srv/cc-m03/.venv/bin/gunicorn --workers 1 --threads 2 --bind 127.0.0.1:8000 --timeout 30 --access-logfile - --error-logfile - app:app
+             └─968 /srv/cc-m03/.venv/bin/python /srv/cc-m03/.venv/bin/gunicorn --workers 1 --threads 2 --bind 127.0.0.1:8000 --timeout 30 --access-logfile - --error-logfile - app:app
+
+Oct 16 05:20:20 najmalidia gunicorn[968]: 127.0.0.1 - - [16/Oct/2026:05:20:20 +0000] "POST / HTTP/1.1" 405 153 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.140 Safari/537.36"
+Oct 16 05:25:19 najmalidia gunicorn[968]: 127.0.0.1 - - [16/Oct/2026:05:25:19 +0000] "GET / HTTP/1.1" 200 774 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0"
+Oct 16 05:28:55 najmalidia gunicorn[968]: 127.0.0.1 - - [16/Oct/2026:05:28:55 +0000] "GET / HTTP/1.1" 200 774 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+Oct 16 05:35:31 najmalidia gunicorn[968]: 127.0.0.1 - - [16/Oct/2026:05:35:31 +0000] "GET / HTTP/1.1" 200 774 "-" "Software Security Research/1.0 (+https://finn.softsec.ruhr-uni-bochum.de)"
+Oct 16 05:43:06 najmalidia gunicorn[968]: 127.0.0.1 - - [16/Oct/2026:05:43:06 +0000] "GET / HTTP/1.1" 200 774 "-" "Software Security Research/1.0 (+https://finn.softsec.ruhr-uni-bochum.de)"
+Oct 16 06:05:54 najmalidia gunicorn[968]: 127.0.0.1 - - [16/Oct/2026:06:05:54 +0000] "GET / HTTP/1.1" 200 774 "-" "Software Security Research/1.0 (+https://goose.softsec.ruhr-uni-bochum.de)"
+Oct 16 06:08:30 najmalidia gunicorn[968]: 127.0.0.1 - - [16/Oct/2026:06:08:30 +0000] "GET /.env HTTP/1.1" 404 207 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.140 Safari/537.36"
+Oct 16 06:08:30 najmalidia gunicorn[968]: 127.0.0.1 - - [16/Oct/2026:06:08:30 +0000] "POST / HTTP/1.1" 405 153 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.140 Safari/537.36"
+Oct 16 06:13:19 najmalidia gunicorn[968]: 127.0.0.1 - - [16/Oct/2026:06:13:19 +0000] "GET / HTTP/1.1" 200 774 "-" "Mozilla/5.0 (Linux; Android 9; AFTWMST22 Build/PS7233; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.152 Mobile Safari/537.36"
+Oct 16 06:17:38 najmalidia gunicorn[968]: 127.0.0.1 - - [16/Oct/2026:06:17:38 +0000] "GET / HTTP/1.1" 200 774 "-" "Software Security Research/1.0 (+https://finn.softsec.ruhr-uni-bochum.de)"
